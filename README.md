@@ -1,0 +1,3 @@
+# hrolog
+
+a haskell exercise
