@@ -2,9 +2,12 @@ module Lib
     ( parseProlog
     ) where
 
-import Text.Parsec.String (Parser)
-import Data.Char
-import Text.Parsec.Combinator (many1)
+import Control.Applicative((<*))
+import Text.Parsec
+import Text.Parsec.String
+import Text.Parsec.Expr
+import Text.Parsec.Token
+import Text.Parsec.Language
 
 parseProlog :: String -> IO ()
 parseProlog source = putStrLn source
