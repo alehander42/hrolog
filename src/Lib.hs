@@ -1,6 +1,10 @@
 module Lib
-    ( someFunc
+    ( parseProlog
     ) where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+import Text.Parsec.String (Parser)
+import Data.Char
+import Text.Parsec.Combinator (many1)
+
+parseProlog :: String -> IO ()
+parseProlog source = putStrLn source
